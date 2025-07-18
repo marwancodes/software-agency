@@ -17,8 +17,11 @@ const Navbar = ({openNav}: Props) => {
 
   useEffect(() => {
     const handler = () => {
-        if (window.scrollY >= 90) { setNavBg(true)};
-        if (window.scrollY < 90) { setNavBg(true)};
+        if (window.scrollY >= 90) {
+        setNavBg(true);
+        } else {
+        setNavBg(false); // ✅ fix: revert back to transparent
+        }
     };
 
     window.addEventListener('scroll', handler);
@@ -29,8 +32,8 @@ const Navbar = ({openNav}: Props) => {
 
 
   return (
-    <div className={`transition-all ${navBg ? "bg-blue-900 shadow-md" : "fixed"} duration-200 h-[10vh] z-[100] fixed w-full bg-[#121212]`}>
-        <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto">
+    <div className={`transition-all ${navBg ? "bg-[#121212] shadow-md" : "fixed"} duration-200 h-[10vh] z-[100] fixed w-full`}>
+        <div className="flex items-center h-full justify-between w-[90%] md:w-[80%] mx-auto">
             {/* LOGO */}
             <div className='flex items-center space-x-2'>
                 <div className='w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center flex-col'>

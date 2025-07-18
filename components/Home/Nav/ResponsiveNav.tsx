@@ -5,11 +5,8 @@ import Navbar from './Navbar';
 import MobileNav from './MobileNav';
 
 
-type Props = {
-    openNav: ()=> void;
-}
 
-const ResponsiveNav = ({}: MobileNavProps) => {
+const ResponsiveNav = () => {
 
     const [showNav, setShowNav] = useState(false);
 
