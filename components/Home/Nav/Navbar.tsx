@@ -5,6 +5,7 @@ import { GiEagleEmblem } from 'react-icons/gi';
 import { navLinks } from '@/constants/constant';
 import Link from 'next/link';
 import { HiBars3BottomRight } from 'react-icons/hi2';
+import ThemeToggler from '@/components/Helper/ThemeToggler';
 
 
 type Props = {
@@ -65,6 +66,7 @@ const Navbar = ({openNav}: Props) => {
                 </a>
             </div>
             {/* ThemeToggler */}
+            <ThemeToggler />
             {/* Burger Menu */}
             <HiBars3BottomRight onClick={openNav} className='w-8 h-8 cursor-pointer text-white lg:hidden' />
         </div>
