@@ -1,5 +1,6 @@
 import React from 'react'
 import ServicesCard from './ServicesCard';
+import SectionButton from '@/components/ui/SectionButton';
 
 const Services = () => {
   return (
@@ -12,9 +13,7 @@ const Services = () => {
                     <h1 className='text-xl sm:text-3xl md:text-4xl font-bold mt-1'>Provide High Quality Software&#39;s Service for All Industry</h1>
                 </div>
                 <div className=' lg:ml-auto'>
-                    <a href="#" className='text-white bg-blue-800 hover:bg-blue-900 text-center text-base sm:text-lg md:text-xl w-full py-4 px-8 transition-colors duration-300 ease font-semibold rounded-full uppercase md:w-auto'>
-                        All Services
-                    </a>
+                    <SectionButton name='All Services' />
                 </div>
             </div>
             {/* Services Card */}
